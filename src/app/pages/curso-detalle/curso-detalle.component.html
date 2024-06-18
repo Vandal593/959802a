@@ -1,0 +1,28 @@
+<div *ngIf="curso">
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{ curso.titulo }}</h1>
+        <img [src]="curso.imagen" alt="Imagen del curso" class="img-fluid mb-4" />
+        <div class="progress mb-4">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            [style.width]="curso.progreso + '%'"
+            [attr.aria-valuenow]="curso.progreso"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            {{ curso.progreso }}%
+          </div>
+        </div>
+        <p>{{ curso.descripcion }}</p>
+        <div *ngFor="let modulo of curso.modulos">
+          <h2>{{ modulo.titulo }}</h2>
+          <p>{{ modulo.descripcion }}</p>
+          <a [routerLink]="['/curso', curso.id, 'modulo', modulo.id]" class="btn btn-secondary">Ver Módulo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

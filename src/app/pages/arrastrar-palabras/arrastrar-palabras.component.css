@@ -1,0 +1,44 @@
+.drop-zone {
+    border: 2px dashed #ccc;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.correct {
+    background-color: #c8e6c9;
+    /* Verde claro para correcto */
+}
+
+.incorrect {
+    background-color: #ffcdd2;
+    /* Rojo claro para incorrecto */
+}
+
+.palabras-container,
+.objetivos-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.palabras-container div,
+.objetivos-container div {
+    cursor: pointer;
+    /* Indica que se puede arrastrar */
+    user-select: none;
+    /* Evita que el texto se seleccione mientras se arrastra */
+}
+
+.drag-items div,
+.drop-zones div {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.drop-zones div {
+    border-style: dashed;
+}

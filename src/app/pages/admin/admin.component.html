@@ -1,0 +1,34 @@
+<!-- admin.component.html -->
+
+<div class="container">
+    <h2>Resultados de Tests</h2>
+  
+    <!-- Filtro por nombre de usuario -->
+    <input type="text" placeholder="Buscar por nombre de usuario" [(ngModel)]="searchUser">
+    
+    <!-- Botón para aplicar el filtro -->
+    <button (click)="applyFilter()">Aplicar Filtro</button>
+
+    <!-- Tabla para mostrar los datos -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre de Usuario</th>
+          <th>Título del Módulo</th>
+          <th>Nombre del Curso</th>
+          <th>Puntuación del Test</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filtrar y mostrar los datos -->
+        <tr *ngFor="let result of filteredResults">
+          <td>{{ result.id }}</td>
+          <td>{{ result.username }}</td>
+          <td>{{ result.module_title }}</td>
+          <td>{{ result.course_name }}</td>
+          <td>{{ result.test_score }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

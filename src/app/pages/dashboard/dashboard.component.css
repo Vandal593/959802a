@@ -1,0 +1,39 @@
+.progress-bar {
+    transition: width 0.6s ease;
+}
+.wrapper {
+    padding: 20px;
+}
+
+.card {
+    transition: transform .2s;
+    /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Slight scale on hover */
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+    /* Ensure the image covers the card */
+    height: 200px;
+    /* Set a fixed height for images */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    /* Slightly larger text for the title */
+}
+
+.card-text {
+    font-size: 0.9rem;
+    /* Optimal reading size */
+}
+
+.progress-bar {
+    background-color: #007bff;
+    /* Use a more vibrant color for progress */
+}

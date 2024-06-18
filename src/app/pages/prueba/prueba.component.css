@@ -1,0 +1,29 @@
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-label {
+    cursor: pointer;
+    margin-left: 0.5rem;
+    /* Ajusta según necesidad para alinear correctamente */
+}
+
+.btn-primary {
+    width: 50%;
+    /* Ajuste de tamaño del botón para hacerlo más prominente */
+    font-size: 1.1rem;
+}
+
+.alert {
+    font-size: 1.2rem;
+    /* Aumenta la legibilidad del mensaje de resultados */
+}

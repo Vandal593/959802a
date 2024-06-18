@@ -1,0 +1,22 @@
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+}
+
+.btn-primary {
+    width: auto;
+    /* Ajusta según la necesidad, aquí auto para mantener el tamaño estándar */
+    font-size: 1.1rem;
+    /* Tamaño de fuente ligeramente más grande */
+    margin-top: 20px;
+    /* Espacio después del último elemento para mejor separación */
+    display: block;
+    /* Hacer que el botón sea un bloque para centrarlo fácilmente */
+    margin-left: auto;
+    margin-right: auto;
+}

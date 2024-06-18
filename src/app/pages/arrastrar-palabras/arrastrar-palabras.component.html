@@ -1,0 +1,20 @@
+<div class="palabras-container">
+  <div *ngFor="let palabra of palabras; let i = index" 
+       draggable="true" 
+       (dragstart)="drag($event, palabra)">
+    {{ palabra }}
+  </div>
+</div>
+
+<div class="objetivos-container">
+  <div *ngFor="let slot of objetivo; let i = index" 
+       class="drop-zone" 
+       [class.correct]="verificarRespuestas()[i]" 
+       [class.incorrect]="objetivo[i] && !verificarRespuestas()[i]"
+       (drop)="drop($event, i)" 
+       (dragover)="allowDrop($event)">
+    {{ slot || 'Arrastra aquí' }}
+  </div>
+</div>
+
+<!-- <button (click)="verificarRespuestas()">Verificar Respuestas</button> -->

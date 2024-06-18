@@ -1,0 +1,8 @@
+<div class="container mt-4">
+  <div class="form-group">
+    <label for="codigoInput"><pre>{{ seudocodigo }}</pre></label>
+    <input type="text" [(ngModel)]="respuestaUsuario" class="form-control" id="codigoInput" placeholder="Completa el código">
+  </div>
+  <button (click)="verificarRespuesta()" class="btn btn-primary">Verificar</button>
+  <p [class]="mensajeClase">{{ mensaje }}</p>
+</div>

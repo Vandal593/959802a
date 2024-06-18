@@ -1,0 +1,14 @@
+/* Añadir margen inferior a la imagen del curso */
+.img-fluid {
+    margin-bottom: 20px;
+}
+
+/* Añadir margen inferior a cada lista de recursos */
+.list-group {
+    margin-bottom: 20px;
+}
+
+/* Añadir estilo para el ícono PDF */
+.fa-file-pdf {
+    color: red;
+}

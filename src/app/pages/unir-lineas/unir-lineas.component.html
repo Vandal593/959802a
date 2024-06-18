@@ -1,0 +1,18 @@
+<!-- En src/app/unir-lineas/unir-lineas.component.html -->
+<div class="container">
+  <div class="elements-container">
+    <div *ngFor="let elemento of elementos; let i = index" draggable="true" (dragstart)="startDrag(i, $event)" class="element">
+      {{ elemento }}
+    </div>
+  </div>
+
+  <svg #svgLineContainer class="line-container">
+    <line *ngFor="let line of lines" [attr.x1]="line.x1" [attr.y1]="line.y1" [attr.x2]="line.x2" [attr.y2]="line.y2" stroke="black"/>
+  </svg>
+
+  <div class="targets-container">
+    <div *ngFor="let objetivo of objetivos; let i = index" (dragover)="allowDrop($event)" (drop)="onDrop(i, $event)" class="target">
+      {{ objetivo }}
+    </div>
+  </div>
+</div>

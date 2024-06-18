@@ -1,0 +1,38 @@
+<div class="container mt-4 mb-4" *ngIf="!mostrarResultados && preguntas.length > 0">
+  <form (ngSubmit)="submitAnswers()">
+    <div *ngFor="let pregunta of preguntas; let i = index" class="card mb-4">
+      <div class="card-header">
+        <h5>Pregunta {{ i + 1 }}</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ pregunta.pregunta }}</p>
+        <div *ngFor="let opcion of pregunta.opciones" class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            [id]="'opcion' + i + '-' + opcion"
+            [name]="'pregunta' + pregunta.id"
+            [value]="opcion"
+            [(ngModel)]="respuestasUsuario[pregunta.id]"
+            [ngModelOptions]="{ standalone: true }"
+          />
+          <label class="form-check-label" [for]="'opcion' + i + '-' + opcion">
+            {{ opcion }}
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="mostrarResultados" class="container mt-4 mb-4 text-center">
+  <div class="alert alert-success" style="margin: 200px;" role="alert">
+    <h4 class="alert-heading">Resultados</h4>
+    <p>Respuestas correctas: {{ resultados.correctas }}</p>
+    <p>Respuestas incorrectas: {{ resultados.incorrectas }}</p>
+  </div>
+  <button *ngIf="resultados.incorrectas > 3" class="btn btn-danger mt-3" (click)="irARetroalimentacion()">Ir a Retroalimentación</button>
+</div>
